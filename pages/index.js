@@ -77,7 +77,10 @@ export async function getStaticProps(req) {
     props,
     revalidate: process.env.EXPORT
       ? undefined
-      : 86400 
+      : siteConfig(
+          'NEXT_REVALIDATE_SECOND',
+          BLOG.NEXT_REVALIDATE_SECOND,
+          props.NOTION_CONFIG
         )
   }
 }
