@@ -48,6 +48,7 @@
     "final-validation": "node scripts/final-validation.js"
   },
   "dependencies": {
+    "@babel/runtime": "^7.28.4",
     "@clerk/localizations": "^3.17.1",
     "@clerk/nextjs": "^5.7.5",
     "@fisch0920/medium-zoom": "^1.0.7",

@@ -503,7 +503,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.7.2":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.28.4, @babel/runtime@npm:^7.7.2":
   version: 7.28.4
   resolution: "@babel/runtime@npm:7.28.4"
   checksum: 10c0/792ce7af9750fb9b93879cc9d1db175701c4689da890e6ced242ea0207c9da411ccf16dc04e689cc01158b28d7898c40d75598f4559109f761c12ce01e959bf7
@@ -6796,6 +6796,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "notion-next@workspace:."
   dependencies:
+    "@babel/runtime": "npm:^7.28.4"
     "@clerk/localizations": "npm:^3.17.1"
     "@clerk/nextjs": "npm:^5.7.5"
     "@fisch0920/medium-zoom": "npm:^1.0.7"
