@@ -88,4 +88,3 @@ export default function Index(props) {
   console.log('Props:', JSON.stringify(props, null, 2)) // 查看是否为空
   return <div>Debug: {JSON.stringify(props, null, 2)}</div>
 }
-export default Index
