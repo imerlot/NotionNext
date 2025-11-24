@@ -85,4 +85,4 @@ export async function getStaticProps(req) {
   }
 }
 
-export default
+export default Index
