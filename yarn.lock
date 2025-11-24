@@ -6020,7 +6020,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"katex@npm:^0.16.21":
+"katex@npm:^0.16.21, katex@npm:^0.16.25":
   version: 0.16.25
   resolution: "katex@npm:0.16.25"
   dependencies:
@@ -6784,6 +6784,7 @@ __metadata:
   dependencies:
     "@clerk/localizations": "npm:^3.17.1"
     "@clerk/nextjs": "npm:^5.7.5"
+    "@fisch0920/medium-zoom": "npm:^1.0.7"
     "@headlessui/react": "npm:^1.7.19"
     "@next/bundle-analyzer": "npm:^12.3.7"
     "@testing-library/jest-dom": "npm:^6.1.4"
@@ -6814,6 +6815,7 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     jest-junit: "npm:^16.0.0"
     js-md5: "npm:^0.8.3"
+    katex: "npm:^0.16.25"
     lodash.throttle: "npm:^4.1.1"
     memory-cache: "npm:^0.2.0"
     next: "npm:^14.2.30"
