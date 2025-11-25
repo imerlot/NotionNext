@@ -14,7 +14,7 @@ const BLOG = {
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 600, // 更新缓存间隔 单位(秒)；即每个页面有60秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
   APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [18, 6], // 夜间模式起至时间，false时关闭根据时间自动切换夜间模式
-  POSTS_PER_PAGE: 12  // 每页显示文章数,默认可能更多
+  POSTS_PER_PAGE: 12,  // 每页显示文章数,默认可能更多
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '龚老师', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '一个需要草料的牛马 🍚', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://www.hotelenglish.cn', // 网站地址
