@@ -4,7 +4,7 @@
   "headers": [],
   "redirects": [
     {
-      "source": "^/(.*)/\\\\d+\\.html$",
+      "source": "^/(.*)/[0-9]+\\.html$",
       "destination": "/$1",
       "permanent": true
     }
