@@ -4,8 +4,8 @@
   "headers": [],
   "redirects": [
     {
-      "source": "/(.*)/\\\\d+\\.html",
-      "destination": "$1",
+      "source": "^/(.*)/\\\\d+\\.html$",
+      "destination": "/$1",
       "permanent": true
     }
   ]
