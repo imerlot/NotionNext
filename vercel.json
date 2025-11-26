@@ -1,12 +1,5 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "headers": [],
-  "redirects": [
-    {
-      "source": "^/(.*)/[0-9]+\\.html$",
-      "destination": "/$1",
-      "permanent": true
-    }
-  ]
+  "headers": []
 }
