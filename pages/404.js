@@ -19,5 +19,8 @@ export async function getStaticProps(req) {
   const props = (await getGlobalData({ from: '404', locale })) || {}
   return { props }
 }
-
+export async function getServerSideProps(context) {
+  context.res.setHeader('Cache-Control', 'public, max-age=36000'); // 缓存1小时
+  return { props: {} };
+}
 export default NoFound
