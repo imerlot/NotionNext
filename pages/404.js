@@ -1,4 +1,3 @@
-正常情况下404是不是不需要动态数据？以下是404.js的完整代码，请将修改后的代码完整输出。
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { getGlobalData } from '@/lib/db/getSiteData'
