@@ -1,5 +1,7 @@
+正常情况下404是不是不需要动态数据？以下是404.js的完整代码，请将修改后的代码完整输出。
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
+import { getGlobalData } from '@/lib/db/getSiteData'
 import { DynamicLayout } from '@/themes/theme'
 
 /**
@@ -12,21 +14,11 @@ const NoFound = props => {
   return <DynamicLayout theme={theme} layoutName='Layout404' {...props} />
 }
 
-export async function getStaticProps({ locale }) {
-  // 404页面通常不需要复杂的动态数据
-  // 如果确实需要基础配置，可以保留最小化的数据获取
-  // 否则可以直接返回空props
-  
-  // 方案1：如果需要基础站点配置（推荐）
-  const NOTION_CONFIG = {
-    THEME: BLOG.THEME,
-    // 添加其他必要的基础配置
-  }
-  
-  return { 
-    props: { NOTION_CONFIG },
-    revalidate: 36000 // ISR缓存10小时，减少不必要的重新生成
-  }
-}
+export async function getStaticProps(req) {
+  const { locale } = req
 
+  const props = (await getGlobalData({ from: '404', locale })) || {}
+  return { props }
+  
+}
 export default NoFound
