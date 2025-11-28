@@ -16,30 +16,31 @@ const PrefixSlug = props => {
 }
 
 export async function getStaticPaths() {
-  // 开发环境或启用跳过构建时，不预生成任何页面
-  if (!BLOG.isProd || process.env.SKIP_BUILD_STATIC_GENERATION === 'true') {
+  if (!BLOG.isProd) {
     return {
       paths: [],
-      fallback: 'blocking'  // ← 改为 'blocking' 确保 SEO 友好
+      fallback: true
     }
   }
 
   const from = 'slug-paths'
   const { allPages } = await getGlobalData({ from })
 
-  // 只预生成最近的 50 篇文章（可通过环境变量控制）
-  const preGenerateCount = parseInt(process.env.PRE_GENERATE_POSTS_COUNT || '50', 10)
-  
+  // 根据slug中的 / 分割成prefix和slug两个字段 ; 例如 article/test
+  // 最终用户可以通过  [domain]/[prefix]/[slug] 路径访问，即这里的 [domain]/article/test
   const paths = allPages
     ?.filter(row => checkSlugHasOneSlash(row))
-    .slice(0, preGenerateCount)  // ← 只取前 N 篇
     .map(row => ({
       params: { prefix: row.slug.split('/')[0], slug: row.slug.split('/')[1] }
     }))
 
+  // 增加一种访问路径 允许通过 [category]/[slug] 访问文章
+  // 例如文章slug 是 test ，然后文章的分类category是 production
+  // 则除了 [domain]/[slug] 以外，还支持分类名访问: [domain]/[category]/[slug]
+
   return {
     paths: paths,
-    fallback: 'blocking'  // ← 改为 'blocking' 确保首次访问时按需生成
+    fallback: true
   }
 }
 
