@@ -141,18 +141,10 @@ const nextConfig = {
   },
 
   // 默认将feed重定向至 /public/rss/feed.xml
-  // 并处理 WordPress 链接重定向
   redirects: process.env.EXPORT
     ? undefined
     : () => {
         return [
-          // 新增：WordPress 链接重定向 (e.g., /some-category/123.html -> /some-category/123)
-          {
-            source: '/:path*/:id(\\d+)\\.html', // 匹配 /任意层级路径/数字.html
-            destination: '/:path*/:id',         // 重定向到 /相同路径/数字
-            permanent: true                     // 301 永久重定向
-          },
-          // 保留原有的 feed 重定向
           {
             source: '/feed',
             destination: '/rss/feed.xml',
