@@ -4,10 +4,11 @@ const CONFIG = {
 
   HEO_HOME_BANNER_ENABLE: true,
 
-  HEO_SITE_CREATE_TIME: '2021-09-21', // 建站日期，用于计算网站运行的第几天
+  HEO_SITE_CREATE_TIME: '2019-09-21', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
+    { title: '小舟从此逝，江海寄余生。' },
     { title: '欢迎造访酒店英语', url: 'https://www.hotelenglish.cn' },
     { title: '酒店英语全新改版了，公众号里的链接暂时无法打开，如需要资料请给龚老师留言', url: 'https://www.miro.cx' }
   ],
@@ -117,9 +118,9 @@ const CONFIG = {
   ],
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '与龚老师联系',
-  HEO_SOCIAL_CARD_TITLE_2: '和龚老师分享',
-  HEO_SOCIAL_CARD_TITLE_3: '说给龚老师听听',
+  HEO_SOCIAL_CARD_TITLE_1: '回首向来萧瑟处.',
+  HEO_SOCIAL_CARD_TITLE_2: '归去，',
+  HEO_SOCIAL_CARD_TITLE_3: '也无风雨也无晴',
   HEO_SOCIAL_CARD_URL: 'https://www.hotelenglish.cn/about',
 
   // 底部统计面板文案
@@ -137,16 +138,16 @@ const CONFIG = {
   HEO_MENU_SEARCH: true, // 显示搜索
 
   HEO_POST_LIST_COVER: true, // 列表显示文章封面
-  HEO_POST_LIST_COVER_HOVER_ENLARGE: false, // 列表鼠标悬停放大
+  HEO_POST_LIST_COVER_HOVER_ENLARGE: true, // 列表鼠标悬停放大
 
   HEO_POST_LIST_COVER_DEFAULT: true, // 封面为空时用站点背景做默认封面
   HEO_POST_LIST_SUMMARY: true, // 文章摘要
   HEO_POST_LIST_PREVIEW: false, // 读取文章预览
-  HEO_POST_LIST_IMG_CROSSOVER: true, // 博客列表图片左右交错
+  HEO_POST_LIST_IMG_CROSSOVER: false, // 博客列表图片左右交错
 
   HEO_ARTICLE_ADJACENT: true, // 显示上一篇下一篇文章推荐
   HEO_ARTICLE_COPYRIGHT: true, // 显示文章版权声明
-  HEO_ARTICLE_NOT_BY_AI: false, // 显示非AI写作
+  HEO_ARTICLE_NOT_BY_AI: true, // 显示非AI写作
   HEO_ARTICLE_RECOMMEND: true, // 文章关联推荐
 
   HEO_WIDGET_LATEST_POSTS: true, // 显示最新文章卡
